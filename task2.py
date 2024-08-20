@@ -14,6 +14,6 @@ def filter_files():
     df['sales'] = df.apply(lambda x: float(x['price'][1:]) * x['quantity'], axis=1)
 
     # include sales, region, & date as only fields
-    df.drop(["quantity", "price"], axis=1).to_csv("../filtered_daily_sales_data.csv")
+    df.drop(columns=["product","quantity", "price"]).to_csv("../filtered_daily_sales_data.csv", index=False)
 
 filter_files()

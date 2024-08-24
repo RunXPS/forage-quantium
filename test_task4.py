@@ -1,4 +1,5 @@
 from task4 import update_graph
+from task4 import app
 import pytest
 
 from selenium import webdriver
@@ -44,3 +45,18 @@ def test_elements_present():
     time.sleep(5)
     driver.quit()
     assert header != [] and graph != [] and radio != []
+
+
+def test_header_exists(dash_duo):
+    dash_duo.start_server(app)
+    dash_duo.wait_for_element("#header", timeout=10)
+
+
+def test_visualization_exists(dash_duo):
+    dash_duo.start_server(app)
+    dash_duo.wait_for_element("#visualization", timeout=10)
+
+
+def test_region_picker_exists(dash_duo):
+    dash_duo.start_server(app)
+    dash_duo.wait_for_element("#region_picker", timeout=10)

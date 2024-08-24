@@ -6,5 +6,3 @@ I followed along with this forage program to get a grasp on what it is, with som
 
 # Reflection
 I found this program very fun, even if it was fairly simplistic. I look forward to working with pandas more
-
-Also, I hope to be able to finish 'task6' sometime in the future.
